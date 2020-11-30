@@ -21,7 +21,7 @@ const questions = [{
     {
         type: 'checkbox',
         name: 'toc',
-        message: 'Choose what optional headings you would like',
+        message: 'Choose what optional headings you would like in your table of contents',
         choices: ['Installation', 'Usage', 'Contribution', 'Test']
     },
     // Installation instructions have not been made manditory so I have added an option for the user to create the markdown heading or not
