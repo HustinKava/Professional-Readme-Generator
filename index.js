@@ -59,19 +59,44 @@ const questions = [{
     {
         type: 'input',
         name: 'test',
-        message: 'Would you like to include testing instructions?'
+        message: 'If you would like to include testing instructions please enter them here'
+    },
+    {
+        type: 'input',
+        name: 'GitHub Username',
+        message: 'Please enter your GitHub username',
+        validate: (value) => {
+            if (value) {
+                return true;
+            } else {
+                return 'You need provide your GitHub username for your project';
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter your email address here',
+        validate: (value) => {
+            if (value) {
+                return true;
+            } else {
+                return 'You need provide your email address for your project';
+            }
+        }
     }
 
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, questions) {}
 
 // function to initialize program
 function init() {
     inquirer.prompt(questions)
         .then(response => {
             console.log(response);
+            writeToFile('./README/README.md', response);
         });
 };
 
