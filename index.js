@@ -3,6 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+
 // array of questions for user
 const questions = [{
         type: 'input',
@@ -16,11 +17,48 @@ const questions = [{
             }
         }
     },
+    // Created a checkbox for the table of contents
     {
         type: 'checkbox',
         name: 'toc',
         message: 'Choose what optional headings you would like',
         choices: ['Installation', 'Usage', 'Contribution', 'Test']
+    },
+    // Installation instructions have not been made manditory so I have added an option for the user to create the markdown heading or not
+    {
+        type: 'list',
+        name: 'installationHeading',
+        message: 'Would you like an installation heading?',
+        choices: ['## Installation', '']
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Please provide installation instructions if needed',
+    },
+    // Contribution instructions have not been made manditory so I have added an option for the user to create the markdown heading or not
+    {
+        type: 'list',
+        name: 'contributionHeading',
+        message: 'Would you like a contribution heading?',
+        choices: ['## Contribution', '']
+    },
+    {
+        type: 'input',
+        name: 'contribution',
+        message: 'If you want to create a criteria for others to contribute to this project, please enter it'
+    },
+    // Test instructions have not been made manditory so I have added an option for the user to create the markdown heading or not
+    {
+        type: 'list',
+        name: 'testsHeading',
+        message: 'Would you like a contribution heading?',
+        choices: ['## Tests', '']
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'If you would like to include testing instructions please enter them here'
     },
     {
         type: 'input',
@@ -36,13 +74,8 @@ const questions = [{
     },
     {
         type: 'input',
-        name: 'installation',
-        message: 'Please provide installation instructions if needed',
-    },
-    {
-        type: 'input',
         name: 'usage',
-        message: 'Please provide the usage information for your project',
+        message: 'Please provide the usage information on how users are able to use your project',
         validate: (value) => {
             if (value) {
                 return true;
@@ -55,17 +88,7 @@ const questions = [{
         type: 'list',
         name: 'license',
         message: 'Select which License you would like to use:',
-        choices: ['MIT', 'Apache 2.0', 'GNU v2.0', 'GNU v3.0', 'ISC']
-    },
-    {
-        type: 'input',
-        name: 'contribution',
-        message: 'If you want to create a criteria for others to contribute to this project, please enter it'
-    },
-    {
-        type: 'input',
-        name: 'test',
-        message: 'If you would like to include testing instructions please enter them here'
+        choices: ['MIT', 'Apache2.0', 'GNUv2.0', 'GNUv3.0', 'ISC']
     },
     {
         type: 'input',
@@ -107,6 +130,7 @@ function writeToFile(fileName, questions) {
 
 // function to initialize program
 function init() {
+    fs.truncate('./README/README.md', 0, function() {})
     inquirer.prompt(questions)
         .then(response => {
             writeToFile('./README/README.md', response);
