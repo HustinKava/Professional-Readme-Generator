@@ -109,8 +109,6 @@ function writeToFile(fileName, questions) {
 function init() {
     inquirer.prompt(questions)
         .then(response => {
-            console.log(response);
-            console.log(response.toc);
             writeToFile('./README/README.md', response);
         });
 };
