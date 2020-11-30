@@ -1,9 +1,10 @@
 // function to generate markdown for README
 function generateMarkdown(response) {
+
     return `
 
     # ${response.title}
-    ![License](https://img.shields.io/badge/License%3A-${license}-blue.svg)
+    ![License](https://img.shields.io/badge/License%3A-${response.license}-blue.svg)
 
     ## Description
     ${response.description}
@@ -33,7 +34,7 @@ function generateMarkdown(response) {
     If you have any questions please feel free to reach out to me at the following email: *${response.email}*
 
     ## License
-    ![License](https://img.shields.io/badge/License%3A-${license}-blue.svg)
+    ![License](https://img.shields.io/badge/License%3A-${response.license}-blue.svg)
 `;
 }
 
