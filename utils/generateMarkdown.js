@@ -8,6 +8,7 @@ function generateMarkdown(response) {
         console.log(element);
         testing += `- [${element}](#${element})\n`
     })
+
     return `
 # ${response.title}
 ![License](https://img.shields.io/badge/License%3A-${response.license}-blue.svg)
@@ -42,7 +43,3 @@ If you have any questions please feel free to reach out to me at the following e
 };
 
 module.exports = generateMarkdown;
-
-// Dynamically create table of contents
-// Dynamically create ## Headers based on user input
-// If ## Header confirmed then add response.test
