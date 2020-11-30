@@ -17,6 +17,12 @@ const questions = [{
         }
     },
     {
+        type: 'checkbox',
+        name: 'toc',
+        message: 'Choose what optional headings you would like',
+        choices: ['Installation', 'Usage', 'Contribution', 'Test']
+    },
+    {
         type: 'input',
         name: 'description',
         message: 'Please enter a description for your project',
@@ -104,6 +110,7 @@ function init() {
     inquirer.prompt(questions)
         .then(response => {
             console.log(response);
+            console.log(response.toc);
             writeToFile('./README/README.md', response);
         });
 };
