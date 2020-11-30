@@ -63,7 +63,7 @@ const questions = [{
     },
     {
         type: 'input',
-        name: 'GitHub Username',
+        name: 'GitHub',
         message: 'Please enter your GitHub username',
         validate: (value) => {
             if (value) {
