@@ -36,6 +36,9 @@ You will then be prompted with a series of questions in the following order
 
 ![](/assets/images/ScreenshotTwo.PNG)
 
+## Video Walkthrough  
+Please click **[Here](https://youtu.be/VeKhEJunMI0)** to view a video on the application
+
 ## Questions
 To view my other repositories or to connect with me on GitHub please click **[Here](https://github.com/HustinKava/)**
 If you have any questions please feel free to reach out to me at the following email: *hkavafsd@gmail.com*
