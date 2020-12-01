@@ -8,6 +8,8 @@ For homework assignment 9 I was tasked with creating a readme generator using No
 ## Table Of Contents
 - [Installation](#Installation)
 - [Usage](#Usage)
+- [Screenshots](#Screenshots)
+- [Video Walkthrough](#Video-Walkthrough)
 - [Questions](#Questions)
 - [License](#License)
 
