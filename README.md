@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/badge/License%3A-MIT-darkgreen.svg)
 
 ## Description
-For homework assignment 9 I was tasked with creating a readme generator using Node and inquirer. I found this assignment enjoyable and learned a lot along the way. The purpose of this application is to quickly build a readme template that a user can fill out.
+For homework assignment 9 I was tasked with creating a readme generator using Node and inquirer. I found this assignment enjoyable and learned a lot along the way. The purpose of this application is to quickly build a readme template that a user can fill out. The table of contents is created dynamically based on user choice and also offers the feature to to select optional headings.
 
 ## Table Of Contents
 - [Installation](#Installation)
