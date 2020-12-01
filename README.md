@@ -32,9 +32,9 @@ You will then be prompted with a series of questions in the following order
 8. Email address
 
 ## Screenshots
-![](/assets/images/Screenshot1.PNG)
+![](/assets/images/ScreenshotOne.PNG)
 
-![](/assets/images/Screenshot2.PNG)
+![](/assets/images/ScreenshotTwo.PNG)
 
 ## Questions
 To view my other repositories or to connect with me on GitHub please click **[Here](https://github.com/HustinKava/)**
