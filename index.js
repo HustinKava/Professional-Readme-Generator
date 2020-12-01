@@ -130,6 +130,7 @@ function writeToFile(fileName, questions) {
 
 // function to initialize program
 function init() {
+    //  truncate clears the readme file each time the app is executed
     fs.truncate('./README/README.md', 0, function() {})
     inquirer.prompt(questions)
         .then(response => {
